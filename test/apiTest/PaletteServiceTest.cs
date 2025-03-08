@@ -29,13 +29,6 @@ namespace apiTest
             Assert.True(Indexes.SetEquals(Enumerable.Range(0, _paletteData.PaletteList.Count)));
         }
 
-        //Thought note: Due to the nature of randomness, this test may fail sometimes.
-        //I could've made made it run until it passes, but what if it never passes due to error?
-        //How to make a test for random that doesn't fail, but doesn't potentially enter an infinite loop?
-        //Even if you set a timeout, there's still the potential for failure.
-        //Set the interation limit to list.Count, and as each item appears, remove the item at its index without altering the other elements appropriate index?
-        //I'll be back to tackle this.
-
         [Fact]
         public void ShouldNotReturnNullorEmpty()
         {
